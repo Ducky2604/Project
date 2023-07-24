@@ -1,0 +1,88 @@
+@use "base" as *;
+
+header{
+    font-family: $font-lato;
+    font-weight: 700;
+    font-size: 30px;
+}
+.line{
+    font-size: 30px;
+    font-weight: 600;
+}
+.block-1 {
+    font-size: 30px;
+    font-weight: 600;
+}
+.block-2 {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+}
+.block-3{
+    font-size: 15px;
+    font-weight: 700;
+}
+.block-4{
+    p{
+        &:first-child{
+    font-size: 35px;
+    font-weight: 900;
+        }
+        &:nth-child(2){
+            font-family: $font-lato;
+        }
+        &:nth-child(3){
+            font-family: $font-lato;
+        }
+        &:nth-child(4){
+            font-family: $font-lato;
+        }
+    }
+}
+.introduction{
+    p{
+        font-size: 40px;
+        font-weight: 600;
+        font-family: $font-playFair;
+        &:nth-child(2){
+            font-size: 25px;
+        }
+    }
+}
+.section-1{
+    font-size: 20px;
+    font-family: $font-playFair;
+    .introduction-1{
+    p{
+
+    &:first-child{
+        font-size: 35px;
+        font-family: $font-lato;
+        text-align: center;
+        font-weight: 600;
+    }
+    &:nth-child(2){
+        font-size: 20px;
+        font-family: $font-lato;
+        text-align: center;
+    }
+    &:nth-child(3){
+        font-size: 13px;
+        font-family: $font-lato;
+        text-align: center;
+    }
+}
+}
+}
+.section-2{
+    p{
+        font-size: 20px;
+        font-family: $font-lato;
+        text-align: center;
+    }    
+}
+footer{
+    font-size: 20px;
+    font-family: $font-playFair;
+    color: $color-grey;
+}

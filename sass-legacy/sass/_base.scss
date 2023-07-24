@@ -1,0 +1,58 @@
+//base.scss is a partial file that contains all the variables, mixins, and functions
+//that we will use in our project.
+
+$color-text: rgb(13, 13, 37);
+$color-main: rgb(255, 136, 0);
+$color-accent:rgb(8, 226, 255);
+$color-star: rgb(128, 128, 128);
+$color-grey: rgb(255, 255, 255);
+
+$font-lato: "Lato", sans-serif;
+$font-playFair: "Playfair Display", serif;
+
+
+
+// this is a map (key-value pair) of images and their positions as a list
+$img-urls: (
+  "img01": ("https://www.hombremoderno.es/wp-content/files/2017/11/actividad-cardio.jpg", center),
+  "img02": ("https://www.aefm.com.au/uploads/2020/05/Centelle-Brisbane%E2%80%98s-Female-Fitness-model-.jpg", center),
+  "img03": ("https://i.blogs.es/a93cdf/2560_3000/840_560.jpeg",center),
+  "img04": ("https://i.blogs.es/bb9765/en-forma-sin-gimnasio/840_560.jpg", center)
+);
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  //this mixin takes a direction argument and sets the flexbox properties accordingly
+@mixin flexLayoutCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    @if $direction == column {
+      flex-direction: column;
+    }
+  }
+  
+  @mixin backgroundSetup($source, $position: none) {
+    background: url($source);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+  
+    // @if($position != null) {
+    //   background-position: $position;
+    // }
+    // @else {
+    //   background-position: none;
+    // }
+  
+    //The if() function takes three arguments: a condition, a value to return if the
+    //condition is true, and a value to return if the condition is false.
+    background-position: if($position != null, $position, none);
+  }
+  
